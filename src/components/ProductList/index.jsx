@@ -1,29 +1,34 @@
-import React from 'react';
-import ProductCard from './components/ProductCard';
+import React, { useState, useEffect } from 'react';
+import ProductCard from '../ProductCard';
+import './index.css'
 
-const ProductList = () => {
-  const products = [
-    {
-      image: 'https://example.com/product1.jpg',
-      name: 'Product 1',
-      description: 'This is product 1.',
-      price: 10,
-    },
-    {
-      image: 'https://example.com/product2.jpg',
-      name: 'Product 2',
-      description: 'This is product 2.',
-      price: 20,
-    },
-  ];
+const ProductGrid = () => {
+  // State for storing products
+  const [products, setProducts] = useState([]);
 
+  // Fetch products when the component mounts
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch('https://fakestoreapi.com/products');
+        const data = await response.json();
+        setProducts(data); // Update state with fetched products
+      } catch (error) {
+        console.error("Failed to fetch products:", error);
+      }
+    };
+
+    fetchProducts();
+  }, []); // Empty dependency array means this effect runs once after initial render
+
+  // Render the grid with ProductCards
   return (
-    <div className="product-list">
-      {products.map((product) => (
-        <ProductCard key={product.name} product={product} />
+    <div className="product-grid">
+      {products.map(product => (
+        <ProductCard key={product.id} {...product} />
       ))}
     </div>
   );
 };
 
-export default ProductList;
+export default ProductGrid;

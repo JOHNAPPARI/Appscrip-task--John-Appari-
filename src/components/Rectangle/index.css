@@ -1,19 +1,40 @@
-.rectangle-contain p{
+.rectangle-contain{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.rectangle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.rectangle span{
     font-family: Simplon Norm;
     font-size: 18px;
     font-weight: 700;
-    line-height: 40px;
+    line-height: 40px; 
     text-align: left;
-    color: #252020;    
+    color: #252020;
 }
 
-.rectangle-contain span{
+.rectangle-icon span{
     font-family: Adobe Caslon Pro;
     font-size: 16px;
     font-weight: 400;
     line-height: 40px;
     text-align: right;
     color: #888792;    
+}
+
+.rectangle-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
 }
 
 .rectangle-contain select{
@@ -35,4 +56,41 @@
     line-height: 40px;
     text-align: right;
     margin: 20px;
+}
+
+.side-items-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.side-bar {
+    width: 300px;
+    text-align: start;
+}
+
+.item-container {
+    padding-left: 20px;
+    width: max-content;
+    padding-top: 50px;
+}
+
+.side-bar label {
+    font-family: Simplon Norm;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.6px;
+    text-align: left;
+    color: #252020;
+}
+
+/* .side-bar hr {
+    margin-top: 20px;
+} */
+
+.sidebar-picon {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

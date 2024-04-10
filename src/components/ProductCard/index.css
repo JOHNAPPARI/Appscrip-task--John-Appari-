@@ -21,3 +21,14 @@
     display: flex;
     gap: 20px;
 }
+
+/* @media only screen and (max-width:600px){
+    .image {
+        width: 168.75px;
+        height: 277px;
+        top: 602px;
+        left: 0.13px;
+        gap: 0px;
+        opacity: 0px;
+    }
+} */

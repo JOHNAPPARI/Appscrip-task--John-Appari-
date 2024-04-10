@@ -7,7 +7,7 @@ import Details from './components/Details';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Header />
       <Details />
       <Footer />

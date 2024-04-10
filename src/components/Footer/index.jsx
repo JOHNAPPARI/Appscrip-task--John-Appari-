@@ -61,7 +61,8 @@ export default function Footer(){
                                 <li><a href='#FAQs'>FAQs</a></li>
                                 <li><a href='#PrivacyPolicy'>Privacy Policy</a></li>
                             </ul>
-                        </nav>                    </div> 
+                        </nav>                    
+                </div> 
                     <div>
                         <h3>Follow Us</h3>
                         <div className='bottom-icon-container'>

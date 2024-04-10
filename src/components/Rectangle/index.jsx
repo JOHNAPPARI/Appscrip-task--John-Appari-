@@ -15,6 +15,7 @@ export default function Rectangle() {
     return(
         <div>
             <div className='rectangle-contain'>
+                <div className='rectangle-filter-contain'>
                 <div className='rectangle'>
                     <span>3425 ITEMS</span>
                     <div className='rectangle-icon'>
@@ -23,6 +24,12 @@ export default function Rectangle() {
                         </svg>
                         <span onClick={toggleVisibility}>{hideFilter}</span>
                     </div>
+                </div>
+                <div className='rectangle-filter'>
+                    <div><span>FILTER</span></div>
+                    <div><span>|</span></div>
+                    
+                </div>
                 </div>
                 <div>
                 <select>
@@ -42,29 +49,17 @@ export default function Rectangle() {
                 <label for="vehicle1"> Customizble </label>
                 <hr/>
                 <div>
-
-
-                    <div className='sidebar-picon'>
-                        <Arrows />
-                        <hr/>
-                    </div>
-                    <div className='sidebar-picon'>
+                    <div>
                         <Arrows />
                     </div>
-                    <hr/>
-                    <div className='sidebar-picon'>
-                        <Arrows />
-                    </div>
-                    <hr/>
-
-                    <div className='sidebar-picon'>
+                    {/* <div className='sidebar-picon'>
                         <p>IDEAL FOR</p>
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M2.72125 6.00017L7.06792 10.3468C7.58125 10.8602 8.42125 10.8602 8.93458 10.3468L13.2813 6.00018" stroke="#292D32" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
                     <span>All</span>
-                    <hr/>
+                    <hr/> */}
                     <div className='sidebar-picon'>
                         <p>OCCASION</p>
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">

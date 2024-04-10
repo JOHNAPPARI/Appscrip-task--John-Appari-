@@ -5,38 +5,6 @@
     text-align: center;
 }
 
-.rectangle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-right: 20px;
-}
-
-.rectangle span{
-    font-family: Simplon Norm;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 40px; 
-    text-align: left;
-    color: #252020;
-}
-
-.rectangle-icon span{
-    font-family: Adobe Caslon Pro;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 40px;
-    text-align: right;
-    color: #888792;    
-}
-
-.rectangle-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 50px;
-}
-
 .rectangle-contain select{
     font-family: Simplon Norm;
     font-size: 18px;
@@ -59,7 +27,7 @@
 }
 
 .side-items-container {
-    width: 100%;
+    /* width: 100vw; */
     height: auto;
     display: flex;
 }
@@ -71,7 +39,7 @@
 
 .item-container {
     padding-left: 20px;
-    width: max-content;
+    /* width: max-content; */
     padding-top: 50px;
 }
 
@@ -84,13 +52,87 @@
     color: #252020;
 }
 
-/* .side-bar hr {
-    margin-top: 20px;
-} */
 
 .sidebar-picon {
     width: 300px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+
+@media only screen and (max-width: 600px){
+
+    .sidebar-picon {
+        width: 0px;
+    }
+
+    .rectangle-filter-contain {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .rectangle-filter {
+        width: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .rectangle {
+        visibility: hidden;
+    }
+
+    .side-bar {
+        visibility: hidden;
+    }
+
+    .item-container {
+        /* width: 100%; */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (min-width: 600px){
+    .rectangle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 20px;
+    }
+    
+    .rectangle span{
+        font-family: Simplon Norm;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 40px; 
+        text-align: left;
+        color: #252020;
+    }
+    
+    .rectangle-icon span{
+        font-family: Adobe Caslon Pro;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 40px;
+        text-align: right;
+        color: #888792;    
+    }
+    
+    .rectangle-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 50px;
+    }
+
+    .rectangle-filter {
+        visibility: hidden;
+    }
 }
